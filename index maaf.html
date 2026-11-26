@@ -1,0 +1,295 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Pika ❤️</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffd6e0, #ffe9ef, #ffb6c9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+    overflow-x: hidden;
+    color: #713849;
+}
+
+.heart {
+    position: fixed;
+    bottom: -40px;
+    font-size: 22px;
+    animation: float 8s linear infinite;
+    opacity: 0.5;
+    z-index: 0;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    20% {
+        opacity: 0.6;
+    }
+    100% {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid white;
+    border-radius: 25px;
+    padding: 35px 25px;
+    box-shadow: 0 15px 40px rgba(155, 65, 90, 0.18);
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.heart-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+    animation: beat 1.5s infinite;
+}
+
+@keyframes beat {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+h1 {
+    font-size: 30px;
+    color: #c94c70;
+    margin-bottom: 12px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #a45b72;
+    margin-bottom: 25px;
+}
+
+button {
+    background: #d94f77;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 13px 22px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 8px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    background: #b93b62;
+}
+
+.letter {
+    display: none;
+    text-align: left;
+    line-height: 1.9;
+    font-size: 15px;
+    margin-top: 25px;
+    background: #fff6f8;
+    padding: 25px;
+    border-radius: 18px;
+    border: 1px solid #ffe0e8;
+}
+
+.letter p {
+    margin-bottom: 16px;
+}
+
+.signature {
+    text-align: right;
+    margin-top: 25px;
+    color: #c94c70;
+    font-weight: bold;
+}
+
+.footer {
+    margin-top: 25px;
+    font-size: 12px;
+    color: #ad7184;
+}
+
+.music {
+    margin-top: 15px;
+}
+
+#musicStatus {
+    font-size: 12px;
+    color: #a45b72;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="heart-icon">❤️</div>
+
+    <h1>Untuk Pika 🤍</h1>
+
+    <p class="subtitle">
+        Ada sesuatu yang ingin aku sampaikan
+        dengan serius, dari hati.
+    </p>
+
+    <button onclick="openLetter()">
+        Buka surat kecil ini 💌
+    </button>
+
+    <div class="music">
+        <button onclick="playMusic()">🎵 Putar musik</button>
+        <button onclick="pauseMusic()">⏸️ Pause</button>
+        <p id="musicStatus">Musik tersedia jika file lagu.mp3 sudah ditambahkan.</p>
+    </div>
+
+    <audio id="music" loop>
+        <source src="lagu.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="letter" id="letter">
+
+        <p>Hai, Pika ❤️</p>
+
+        <p>
+            Aku mau minta maaf atas prank yang aku lakukan
+            kemarin. Aku sadar ternyata apa yang aku anggap
+            bercanda justru membuat kamu kesal, kecewa,
+            bahkan mungkin merasa tidak nyaman.
+        </p>
+
+        <p>
+            Aku sudah membaca jawaban kamu, dan aku sadar
+            bahwa prank itu memang tidak lucu buat kamu.
+            Aku tidak seharusnya menganggap sesuatu sebagai
+            candaan kalau ternyata membuat orang yang aku
+            sayangi merasa tidak nyaman.
+        </p>
+
+        <p>
+            Aku tidak mau membela diri dengan mengatakan
+            bahwa itu cuma bercanda. Aku benar-benar minta
+            maaf karena sudah membuat kamu kesal.
+        </p>
+
+        <p>
+            Rencana jalan-jalan ini bukan untuk membuat
+            kamu harus segera memaafkan aku, bukan juga
+            untuk menghapus rasa kesal kamu begitu saja.
+            Aku cuma ingin mengajak kamu menikmati waktu
+            bersama, ngobrol, tertawa, dan membuat kenangan
+            yang jauh lebih baik.
+        </p>
+
+        <p>
+            Aku sudah membaca pilihan kamu tentang Blok M,
+            perjalanan yang santai, naik motor, dan bahkan
+            tambahan Kebun Raya Bogor. Aku akan berusaha
+            membuat perjalanan itu menyenangkan, tentunya
+            dengan kita membicarakannya bersama.
+        </p>
+
+        <p>
+            Aku tidak ingin kamu merasa harus berpura-pura
+            baik-baik saja. Kalau masih kesal, tidak apa-apa.
+            Perasaan kamu tetap penting buat aku.
+        </p>
+
+        <p>
+            Terima kasih karena masih mau memberikan
+            kesempatan untuk jalan-jalan bersama, meskipun
+            kamu masih kesal.
+        </p>
+
+        <p>
+            Sekali lagi, aku minta maaf ya.
+            Aku sayang kamu, dan aku ingin belajar menjadi
+            seseorang yang lebih baik dalam memperlakukan
+            kamu. ❤️
+        </p>
+
+        <p class="signature">
+            Dari aku,<br>
+            yang masih belajar menyayangimu dengan lebih baik. ❤️
+        </p>
+
+    </div>
+
+    <div class="footer">
+        Dibuat dengan hati, bukan untuk membenarkan kesalahan. 🤍
+    </div>
+
+</div>
+
+<script>
+
+function openLetter() {
+    const letter = document.getElementById("letter");
+    letter.style.display = "block";
+
+    letter.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+    });
+}
+
+function playMusic() {
+    const music = document.getElementById("music");
+
+    music.play()
+    .then(() => {
+        document.getElementById("musicStatus").innerText =
+        "Musik sedang diputar ❤️";
+    })
+    .catch(() => {
+        document.getElementById("musicStatus").innerText =
+        "Pastikan file lagu.mp3 ada di folder yang sama.";
+    });
+}
+
+function pauseMusic() {
+    const music = document.getElementById("music");
+    music.pause();
+
+    document.getElementById("musicStatus").innerText =
+    "Musik dijeda.";
+}
+
+// Animasi hati
+for (let i = 0; i < 22; i++) {
+    let heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = ["❤️", "💕", "💗", "💖", "🌸"][Math.floor(Math.random() * 5)];
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration = (5 + Math.random() * 8) + "s";
+    heart.style.animationDelay = (Math.random() * 8) + "s";
+    document.body.appendChild(heart);
+}
+
+</script>
+
+</body>
+</html>
