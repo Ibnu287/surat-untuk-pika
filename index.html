@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Pika ❤️</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg,#ffd6e0,#ffe9ef,#ffb6c9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    color: #713849;
+}
+
+.heart {
+    position: fixed;
+    bottom: -30px;
+    animation: float 8s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    from {transform: translateY(0);opacity: 0;}
+    20% {opacity: .7;}
+    to {transform: translateY(-110vh);opacity: 0;}
+}
+
+.container {
+    width: 100%;
+    max-width: 650px;
+    background: rgba(255,255,255,.92);
+    border-radius: 25px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(155,65,90,.2);
+    position: relative;
+    z-index: 2;
+}
+
+h1 {
+    color: #c94c70;
+}
+
+button {
+    border: none;
+    background: #d94f77;
+    color: white;
+    padding: 13px 20px;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 8px;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #b93b62;
+}
+
+.letter {
+    display: none;
+    text-align: left;
+    line-height: 1.9;
+    padding: 22px;
+    background: #fff6f8;
+    border-radius: 18px;
+    margin-top: 20px;
+}
+
+.letter p {
+    margin-bottom: 16px;
+}
+
+.signature {
+    text-align: right;
+    color: #c94c70;
+    font-weight: bold;
+}
+
+textarea {
+    width: 100%;
+    min-height: 130px;
+    padding: 15px;
+    border-radius: 15px;
+    border: 1px solid #e9b9c8;
+    font-family: inherit;
+    font-size: 15px;
+    resize: vertical;
+}
+
+input {
+    padding: 12px;
+    width: 100%;
+    border: 1px solid #e9b9c8;
+    border-radius: 12px;
+    margin-bottom: 12px;
+    font-family: inherit;
+}
+
+.reply {
+    margin-top: 25px;
+    background: #fff0f5;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+#status {
+    font-size: 14px;
+    color: #c94c70;
+    margin-top: 12px;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>❤️ Untuk Pika 🤍</h1>
+
+<p>
+Ada sesuatu yang ingin aku sampaikan
+dengan serius, dari hati.
+</p>
+
+<button onclick="openLetter()">
+💌 Buka surat kecil ini
+</button>
+
+<br>
+
+<button onclick="playMusic()">🎵 Putar musik</button>
+<button onclick="pauseMusic()">⏸️ Pause musik</button>
+
+<audio id="music" loop>
+<source src="tulus.mp3" type="audio/mpeg">
+</audio>
+
+<div class="letter" id="letter">
+
+<p>Hai, Pika ❤️</p>
+
+<p>
+Aku mau minta maaf atas prank yang aku lakukan.
+Aku sadar ternyata apa yang aku anggap bercanda
+justru membuat kamu kesal, kecewa, dan tidak nyaman.
+</p>
+
+<p>
+Aku sudah membaca jawaban kamu. Aku sadar bahwa
+prank itu memang tidak lucu buat kamu. Aku tidak
+seharusnya menganggap sesuatu sebagai candaan
+kalau ternyata membuat orang yang aku sayangi
+merasa tidak nyaman.
+</p>
+
+<p>
+Aku tidak mau membela diri dengan mengatakan
+bahwa itu cuma bercanda. Aku benar-benar minta
+maaf karena sudah membuat kamu kesal.
+</p>
+
+<p>
+Rencana jalan-jalan ini bukan untuk membuat
+kamu harus segera memaafkan aku. Aku cuma ingin
+mengajak kamu menikmati waktu bersama, ngobrol,
+tertawa, dan membuat kenangan yang lebih baik.
+</p>
+
+<p>
+Aku sudah membaca pilihan kamu tentang Blok M,
+perjalanan yang santai, naik motor, dan bahkan
+tambahan Kebun Raya Bogor. Aku akan berusaha
+membuat perjalanan itu menyenangkan, tentunya
+dengan kita membicarakannya bersama.
+</p>
+
+<p>
+Aku tidak ingin kamu merasa harus berpura-pura
+baik-baik saja. Kalau masih kesal, tidak apa-apa.
+Perasaan kamu tetap penting buat aku.
+</p>
+
+<p>
+Terima kasih karena masih mau memberikan
+kesempatan untuk jalan-jalan bersama, meskipun
+kamu masih kesal.
+</p>
+
+<p>
+Sekali lagi, aku minta maaf ya.
+Aku sayang kamu, dan aku ingin belajar menjadi
+seseorang yang lebih baik dalam memperlakukan kamu.
+❤️
+</p>
+
+<p class="signature">
+Dari aku,<br>
+yang masih belajar menyayangimu dengan lebih baik ❤️
+</p>
+
+</div>
+
+<div class="reply">
+
+<h3>💌 Kamu boleh membalas di sini</h3>
+
+<p>
+Aku ingin mendengar apa yang benar-benar
+kamu rasakan. Tidak harus memaafkan sekarang.
+</p>
+
+<input id="nama" placeholder="Nama atau panggilan kamu">
+
+<textarea id="balasan"
+placeholder="Tulis apa yang ingin kamu sampaikan..."></textarea>
+
+<button onclick="sendReply()">Kirim balasan ❤️</button>
+
+<p id="status"></p>
+
+</div>
+
+<p style="font-size:12px;color:#ad7184;margin-top:25px">
+Dibuat dengan hati, bukan untuk membenarkan kesalahan 🤍
+</p>
+
+</div>
+
+<script>
+
+const URL_SCRIPT = "https://script.google.com/macros/s/AKfycbx0acik2_yGbccPm9MeDyiQwy-wf7iykgHPL0p5-rkgLdF7PCTEetzGuySUxLWuHDLv/exec";
+
+function openLetter() {
+    document.getElementById("letter").style.display = "block";
+    document.getElementById("letter").scrollIntoView({
+        behavior: "smooth"
+    });
+}
+
+function playMusic() {
+    document.getElementById("music").play();
+}
+
+function pauseMusic() {
+    document.getElementById("music").pause();
+}
+
+function sendReply() {
+
+    const nama = document.getElementById("nama").value;
+    const balasan = document.getElementById("balasan").value;
+    const status = document.getElementById("status");
+
+    if (!balasan.trim()) {
+        status.innerText = "Isi balasan kamu terlebih dahulu ❤️";
+        return;
+    }
+
+    status.innerText = "Sedang mengirim...";
+
+    fetch(URL_SCRIPT, {
+        method: "POST",
+        mode: "no-cors",
+        headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+        },
+        body: JSON.stringify({
+            nama: nama,
+            balasan: balasan
+        })
+    })
+    .then(() => {
+        status.innerText =
+        "Balasan kamu sudah dikirim. Terima kasih ❤️";
+
+        document.getElementById("balasan").value = "";
+    })
+    .catch(() => {
+        status.innerText =
+        "Gagal mengirim. Silakan coba kembali.";
+    });
+
+}
+
+// Hati melayang
+for (let i = 0; i < 25; i++) {
+
+    const heart = document.createElement("div");
+    heart.className = "heart";
+    heart.innerHTML = ["❤️","💕","💗","💖","🌸"][
+        Math.floor(Math.random() * 5)
+    ];
+
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.animationDuration =
+        (5 + Math.random() * 8) + "s";
+    heart.style.animationDelay =
+        (Math.random() * 8) + "s";
+    heart.style.fontSize =
+        (15 + Math.random() * 25) + "px";
+
+    document.body.appendChild(heart);
+}
+
+</script>
+
+</body>
+</html>
